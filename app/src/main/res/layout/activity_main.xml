@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_anchor="@+id/mRecyclerView"
+
+        app:layout_anchorGravity="center"
+        tools:listitem="@layout/notes_item" />
+
+    <TextView
+        android:id="@+id/txtDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Note Not Found! "
+        android:layout_marginTop="170dp"
+        android:textSize="16sp"
+        android:textColor="@color/splash"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fltBtn"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="31dp"
+        app:backgroundTint="@color/black"
+        android:layout_marginBottom="45dp"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/white"
+        app:rippleColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/default_img"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/man" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
